@@ -133,7 +133,7 @@ const Layout = ({ title, isLoading, children }: LayoutProps) => {
       </Helmet>
       <Header>
         <HomeLink to="/" onClick={resetTrivia}>
-          <Image src="/logo512.png" />
+          <Image src="/logo512.png" alt="Trivia Challenge" />
           Trivia
         </HomeLink>
       </Header>
