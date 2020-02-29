@@ -11,6 +11,7 @@ import store, { TriviaDispatch } from './redux/store'
 
 import GlobalStyle from './components/GlobalStyle'
 import Home from './routes/Home'
+import NotFound from './routes/NotFound'
 import Quiz from './routes/Quiz'
 import Results from './routes/Results'
 
@@ -40,6 +41,9 @@ const Routes = () => {
             </Route>
             <Route path="/results">
               <Results />
+            </Route>
+            <Route>
+              <NotFound />
             </Route>
           </Switch>
         </animated.div>
