@@ -36,6 +36,7 @@ const StyledRemoveIcon = styled(RemoveIcon)`
 
 const Text = styled.div`
   ${typography.Body}
+  word-break: break-word;
 `
 
 export type ResultProps = {
