@@ -25,6 +25,7 @@ const H1 = styled.h1`
   ${typography.H2};
   text-align: center;
   margin-bottom: 48px;
+  word-break: break-word;
 
   @media only screen and (min-width: 1280px) {
     ${typography.H1};
@@ -36,6 +37,7 @@ const H2 = styled.h2`
   ${typography.H3};
   text-align: center;
   margin-bottom: 48px;
+  word-break: break-word;
 
   @media only screen and (min-width: 1280px) {
     ${typography.H2};
