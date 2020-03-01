@@ -42,7 +42,7 @@ const StyledLink = styled(Link)`
 const Home = () => (
   <Layout title="Home">
     <Container>
-      <H1>Welcome to the Trivia Challenge!</H1>
+      <H1 data-cy="home-title">Welcome to the Trivia Challenge!</H1>
       <H2>You will be presented with 10 True or False questions.</H2>
       <H2>Can you score 100%?</H2>
       <StyledLink to="/quiz">
