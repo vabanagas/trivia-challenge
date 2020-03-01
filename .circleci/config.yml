@@ -1,17 +1,33 @@
 version: 2.1
 
-orbs:
-  node: circleci/node@1.1.6
-
 jobs:
-  build:
-    executor:
-      name: node/default
-      tag: '12.14.1-browsers'
+  test:
+    docker:
+      - image: cypress/base:12.16.1
     steps:
       - checkout
-      - node/with-cache:
-          steps:
-            - run: yarn install
+      # restore folders with yarn dependencies and Cypress binary
+      - restore_cache:
+          keys:
+            - yarn-packages-v1-{{ .Branch }}-{{ checksum "yarn.lock" }}
+            - yarn-packages-v1-{{ .Branch }}-
+            - yarn-packages-v1-
+      # install yarn dependencies and Cypress binary
+      # if they were cached, this step is super quick
+      - run:
+          name: Install dependencies
+          command: yarn install --frozen-lockfile
+      - run: yarn cy:verify
+      # save npm dependencies and Cypress binary for future runs
+      - save_cache:
+          key: yarn-packages-v1-{{ .Branch }}-{{ checksum "yarn.lock" }}
+          paths:
+            - ~/.cache
       - run: yarn lint
       - run: yarn cy:ci
+
+workflows:
+  version: 2.1
+  build:
+    jobs:
+      - test

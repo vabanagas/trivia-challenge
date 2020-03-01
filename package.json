@@ -28,7 +28,8 @@
     "postbuild": "react-snap",
     "cy:ci": "start-test 3000 cy:run",
     "cy:open": "cypress open",
-    "cy:run": "cypress run"
+    "cy:run": "cypress run",
+    "cy:verify": "cypress verify"
   },
   "eslintConfig": {
     "extends": [
