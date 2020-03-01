@@ -1,4 +1,8 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Trivia Challenge
+
+[![Netlify Status](https://api.netlify.com/api/v1/badges/25a505f8-bbac-4e83-acdc-18afad645784/deploy-status)](https://app.netlify.com/sites/trivia-challenge/deploys)
+
+[![CircleCI](https://circleci.com/gh/vabanagas/trivia-challenge.svg?style=svg)](https://circleci.com/gh/vabanagas/trivia-challenge)
 
 ## Available Scripts
 
@@ -12,10 +16,9 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 The page will reload if you make edits.<br />
 You will also see any lint errors in the console.
 
-### `yarn test`
+### `yarn cy:ci`
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Launches the cypress test runner.
 
 ### `yarn build`
 
